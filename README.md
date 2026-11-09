@@ -6,7 +6,7 @@ Galaxy Watch Ultra and Galaxy Watch 8 Ultra run Wear OS, so this module is a sta
 
 ## Build
 
-Use Android Studio or the Gradle wrapper from Windows. Point `local.properties` at your Android SDK.
+Use Android Studio or the Gradle wrapper from Windows. Point `local.properties` at your Android SDK, and set `JAVA_HOME` to a JDK 21 (Android Studio's OpenJDK works). `gradle.properties` in this repo already points Gradle at `C:\Program Files\Android\openjdk\jdk-21.0.8`, but the wrapper script still needs `JAVA_HOME` before Gradle starts.
 
 ```powershell
 .\gradlew.bat :core:test :app:assembleDebug :wear:assembleDebug
